@@ -8,20 +8,15 @@ html(lang='ja')
   body
 
     div.container(style='padding: 20px 0;')
-      a.btn.btn-primary(data-toggle="modal",href="#myModal") Show me!
-      div.modal.fade#myModal
-        div.modal-dialog
-          div.modal-content
-            div.modal-header
-              button.close(data-dismiss="modal") &times;
-              h4.modal-title My Modal
-            div.modal-body
-              |こんにちは！
-            div.modal-footer
-              button.btn.btn-primary OK!
-
-
-
+      ul.nav.nav-tabs(style="margin-bottom: 15px;")
+        li.active
+          a(href="#home",data-toggle="tab") Home
+        li
+          a(href="#about",data-toggle="tab") About 
+      
+      div.tab-content
+        div.tab-pane.active#home ほーむだよー
+        div.tab-pane#about あばうとだよー
 
 
     script(src='https://code.jquery.com/jquery.js')
