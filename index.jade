@@ -7,17 +7,32 @@ html(lang='ja')
     link(href='css/bootstrap.min.css', rel='stylesheet')
   body
     div.container(style='padding: 20px 0;')
-      p
-        i.glyphicon.glyphicon-book
-        |  Book
-      button.btn.btn-primary 
-        i.glyphicon.glyphicon-book
-        |  Push Me!
-      
       div.btn-group
-        button.btn.btn-primary Push Me!
-        button.btn.btn-success Push Me!
-        button.btn.btn-info Push Me!
+        button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown")
+          |Action
+          span.caret
+        ul.dropdown-menu
+          li
+            a(href="") Action
+          li
+            a(href="") Action
+          li.divider
+          li
+            a(href="") Action
+      div.btn-group
+        button.btn.btn-primary
+          |Action
+        button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown")
+          span.caret
+        ul.dropdown-menu
+          li
+            a(href="") Action
+          li
+            a(href="") Action
+          li.divider
+          li
+            a(href="") Action
+     
 
     script(src='https://code.jquery.com/jquery.js')
     script(src='js/bootstrap.min.js')
