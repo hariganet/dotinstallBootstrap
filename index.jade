@@ -7,32 +7,29 @@ html(lang='ja')
     link(href='css/bootstrap.min.css', rel='stylesheet')
   body
     div.container(style='padding: 20px 0;')
-      div.btn-group
-        button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown")
-          |Action
-          span.caret
-        ul.dropdown-menu
-          li
-            a(href="") Action
-          li
-            a(href="") Action
-          li.divider
-          li
-            a(href="") Action
-      div.btn-group
-        button.btn.btn-primary
-          |Action
-        button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown")
-          span.caret
-        ul.dropdown-menu
-          li
-            a(href="") Action
-          li
-            a(href="") Action
-          li.divider
-          li
-            a(href="") Action
-     
+      ul.breadcrumb
+        li
+          a(href="") Home
+        li
+          a(href="") Users
+        li.active
+          |@taguchi
+      ul.pagination
+        li.disabled
+          a(href="") &laquo;
+        li.active
+          a(href="") 1
+        li
+          a(href="") 2 
+        li
+          a(href="") 3 
+        li
+          a(href="") &raquo;
+      ul.pager
+        li.previous
+          a(href="") 前へ 
+        li.next
+          a(href="") 次へ
 
     script(src='https://code.jquery.com/jquery.js')
     script(src='js/bootstrap.min.js')
