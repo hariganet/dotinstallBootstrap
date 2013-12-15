@@ -8,23 +8,19 @@ html(lang='ja')
   body
 
     div.container(style='padding: 20px 0;')
-      p
-        |Product A 
-        span.label.label-primary New!
-      p
-        |Inbox 
-        span.badge 5 
-      p
-        |Inbox 
-        span.badge
-      div.alert.alert-info
-        button.close(data-dismiss="alert") &times;
-        | お知らせ！
-      div.panel.panel-primary
-        div.panel-heading
-          |お知らせ！
-        div.panel-body
-          |こんにちは
+      a.btn.btn-primary(data-toggle="modal",href="#myModal") Show me!
+      div.modal.fade#myModal
+        div.modal-dialog
+          div.modal-content
+            div.modal-header
+              button.close(data-dismiss="modal") &times;
+              h4.modal-title My Modal
+            div.modal-body
+              |こんにちは！
+            div.modal-footer
+              button.btn.btn-primary OK!
+
+
 
 
 
