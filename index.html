@@ -1,1 +1,8 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><title>Bootstrap&#12398;&#32244;&#32722;</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="css/bootstrap.min.css" rel="stylesheet"></head><body><div style="padding: 20px 0;" class="container"><ul style="margin-bottom: 15px;" class="nav nav-tabs"><li class="active"><a href="#home" data-toggle="tab">Home</a></li><li><a href="#about" data-toggle="tab">About </a></li></ul><div class="tab-content"><div id="home" class="tab-pane active">ほーむだよー</div><div id="about" class="tab-pane">あばうとだよー</div></div></div><script src="https://code.jquery.com/jquery.js"></script><script src="js/bootstrap.min.js"></script></body></html>
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><title>Bootstrap&#12398;&#32244;&#32722;</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="css/bootstrap.min.css" rel="stylesheet"></head><body><div style="padding: 20px 0;" class="container"><p><a href="#" data-toggle="tooltip" title="説明">this</a>and <a href="#" data-toggle="popover" title="説明" data-content="さらに説明">that</a>.</p></div><script src="https://code.jquery.com/jquery.js"></script><script src="js/bootstrap.min.js"></script><script>$(function(){
+  $("[data-toggle=tooltip]").tooltip(
+    {placement: 'bottom'}
+  );
+  $("[data-toggle=popover]").popover(
+  );
+});
+</script></body></html>
