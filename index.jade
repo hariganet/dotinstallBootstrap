@@ -7,23 +7,37 @@ html(lang='ja')
     link(href='css/bootstrap.min.css', rel='stylesheet')
   body
 
-    div.container(style='padding: 20px 0;')
-      p
-        a(href="#",data-toggle="tooltip",title="説明")
-          |this
-        | and 
-        a(href="#",data-toggle="popover",title="説明",data-content="さらに説明") that
-        |.
+    div.container(style="padding: 20px 0;")
+      div#carousel-example-generic.carousel.slide(data-ride="carousel",style="width: 500px;")
+        // Indicators
+        ol.carousel-indicators
+          li.active(data-target="#carousel-example-generic",data-slide-to="0")
+          li(data-target="#carousel-example-generic",data-slide-to="1")
+          li(data-target="#carousel-example-generic",data-slide-to="2")
+
+        // Wrapper for slides
+        div.carousel-inner
+          div.item.active
+            img(src="img/photo1.jpg",alt="photo1")
+            div.carousel-caption 写真１
+          div.item
+            img(src="img/photo2.jpg",alt="photo2")
+            div.carousel-caption 写真２
+          div.item
+            img(src="img/photo3.jpg",alt="photo3")
+            div.carousel-caption 写真３
+          div.item
+            img(src="img/photo4.jpg",alt="photo4")
+            div.carousel-caption 写真４
+        // Controls
+        a.left.carousel-control(href="#carousel-example-generic",data-slide="prev")
+          span.glyphicon.glyphicon-chevron-left
+        a.right.carousel-control(href="#carousel-example-generic",data-slide="next")
+          span.glyphicon.glyphicon-chevron-right
+
+
 
     script(src='https://code.jquery.com/jquery.js')
     script(src='js/bootstrap.min.js')
     
-    script
-      $(function(){
-        $("[data-toggle=tooltip]").tooltip(
-          {placement: 'bottom'}
-        );
-        $("[data-toggle=popover]").popover(
-        );
-      });
-
+   
